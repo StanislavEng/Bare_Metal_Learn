@@ -25,3 +25,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data F:\engineering\c
 
 !ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-20 14:35:53.694
 !MESSAGE Log4j initialized with config file F:\engineering\codespace\bare_metal\Bare_Metal_L476\1_GPIO\1_GPIO\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-20 14:35:59.175
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-02-20 14:38:37.700
+!MESSAGE Indexed '1_GPIO_BUTTON' (3 sources, 53 headers) in 0.723 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
