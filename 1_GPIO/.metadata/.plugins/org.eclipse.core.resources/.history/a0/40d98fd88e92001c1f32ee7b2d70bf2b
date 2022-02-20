@@ -1,0 +1,36 @@
+/*
+ * Example 1 --> LED BLink
+ *
+ * Description:
+ * After many attempts not working, I have found the source of my error
+ * With now a working understanding starting the learning
+ * Made this work on easier to use F429
+ * Switching to L476 to match the family used by the IoT Dev Kit
+ *
+ * Nucleo LED on PA5
+ *
+ * Date: Feb 20, 2022
+ *
+ */
+
+// LED on GPIOA Pin 5
+
+#define PERIPH_BASE 		(0x40000000UL) // GPIOs are found in the peripheral memory area
+
+// GPIO A memory location is found on AHB2
+#define AHB2_OFFSET 		(0x08000000UL) // offset of AHB2 from peripheral base
+#define AHB2_BASE			(PERIPH_BASE + AHB2_OFFSET)
+
+// RCC memory location is found on AHB1
+#define AHB1_OFFSET			(0x00020000UL) // offset of AHB1 from peripheral base
+#define AHB1_BASE			(PERIPH_BASE + AHB1_OFFSET)
+
+#define GPIOA_OFFSET		(0x0000UL)
+#define GPIOA				(AHB2_BASE + GPIOA_OFFSET)
+
+#define RCC_OFFSET			(0x1000UL)
+#define RCC					(AHB1_BASE + RCC_OFFSET)
+
+#define AHB2EN_R_OFFSET		(0x4CUL) // AHB2EN offset for RCC
+#define AHB2_EN_R			()
+

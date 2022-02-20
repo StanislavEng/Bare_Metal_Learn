@@ -1,0 +1,18 @@
+/*
+ * Example 1 --> LED BLink
+ *
+ * Description:
+ * After many attempts not working, I have found the source of my error
+ * With now a working understanding starting the learning
+ * Made this work on easier to use F429
+ * Switching to L476 to match the family used by the IoT Dev Kit
+ *
+ * Nucleo LED on PA5
+ *
+ * Date: Feb 20, 2022
+ *
+ */
+
+// LED on GPIOA Pin 5
+
+#define PERIPH_BASE 		(0x40000000UL)
