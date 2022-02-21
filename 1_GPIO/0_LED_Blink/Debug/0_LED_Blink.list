@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00000b31  00000000  00000000  00010480  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000000e3  00000000  00000000  00010fb1  2**0
+ 18 .debug_line   000000e2  00000000  00000000  00010fb1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0000304b  00000000  00000000  00011094  2**0
+ 19 .debug_str    0000304b  00000000  00000000  00011093  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000053  00000000  00000000  000140df  2**0
+ 20 .comment      00000053  00000000  00000000  000140de  2**0
                   CONTENTS, READONLY
  21 .debug_frame  00000058  00000000  00000000  00014134  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -79,10 +79,10 @@ Disassembly of section .text:
  80001c4:	080002c4 	.word	0x080002c4
 
 080001c8 <main>:
-
-
-
-
+ * output is set as 01
+ * |= (1U<<10)
+ * &=~(1U<<11)
+ */
 
 int main (void){
  80001c8:	b480      	push	{r7}
@@ -119,7 +119,7 @@ int main (void){
  80001fe:	4a08      	ldr	r2, [pc, #32]	; (8000220 <main+0x58>)
  8000200:	f083 0320 	eor.w	r3, r3, #32
  8000204:	6013      	str	r3, [r2, #0]
-		for(int i = 0; i<300000;i++){}
+		for(int i = 0; i<300000;i++){} // arbitrary delay
  8000206:	2300      	movs	r3, #0
  8000208:	607b      	str	r3, [r7, #4]
  800020a:	e002      	b.n	8000212 <main+0x4a>

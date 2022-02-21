@@ -1,20 +1,10 @@
-14:35:13 **** Incremental Build of configuration Debug for project 0_LED_Blink_Struct ****
+19:31:54 **** Incremental Build of configuration Debug for project 0_LED_Blink_Struct ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "0_LED_Blink_Struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\1_GPIO\0_LED_Blink_Struct\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_LED_Blink_Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 0_LED_Blink_Struct.elf
- 
 arm-none-eabi-size   0_LED_Blink_Struct.elf 
-arm-none-eabi-objdump -h -S  0_LED_Blink_Struct.elf  > "0_LED_Blink_Struct.list"
-arm-none-eabi-objcopy  -O binary  0_LED_Blink_Struct.elf  "0_LED_Blink_Struct.bin"
    text	   data	    bss	    dec	    hex	filename
     768	      8	   1568	   2344	    928	0_LED_Blink_Struct.elf
 Finished building: default.size.stdout
  
-Finished building: 0_LED_Blink_Struct.list
-Finished building: 0_LED_Blink_Struct.bin
- 
- 
 
-14:35:14 Build Finished. 0 errors, 0 warnings. (took 839ms)
+19:31:54 Build Finished. 0 errors, 0 warnings. (took 274ms)
 

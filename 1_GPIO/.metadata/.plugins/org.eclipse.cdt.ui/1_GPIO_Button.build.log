@@ -1,0 +1,20 @@
+20:12:19 **** Incremental Build of configuration Debug for project 1_GPIO_Button ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "1_GPIO_Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\1_GPIO\1_GPIO_Button\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_GPIO_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_GPIO_Button.elf
+ 
+arm-none-eabi-size   1_GPIO_Button.elf 
+arm-none-eabi-objdump -h -S  1_GPIO_Button.elf  > "1_GPIO_Button.list"
+arm-none-eabi-objcopy  -O binary  1_GPIO_Button.elf  "1_GPIO_Button.bin"
+   text	   data	    bss	    dec	    hex	filename
+    776	      8	   1568	   2352	    930	1_GPIO_Button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_GPIO_Button.list
+Finished building: 1_GPIO_Button.bin
+ 
+ 
+
+20:12:20 Build Finished. 0 errors, 0 warnings. (took 1s.67ms)
+
