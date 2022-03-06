@@ -14,13 +14,8 @@ int main (void){
     uart2_tx_init();
 
     while (1){
-//        uart2_write('Y');
-    	printf("Hello from STM32L4..........\n\r");
-    	for (int i = 0; i < 100000; i++){
-    		if (i == 50000){
-    			printf("timer break\n\r");
-    		}
-    	}
+        uart2_write('Y');
+//    	printf("Hello from STM32L4..........\n\r");
 
     }
 

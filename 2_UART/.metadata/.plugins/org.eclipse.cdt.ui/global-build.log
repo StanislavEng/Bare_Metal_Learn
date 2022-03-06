@@ -1,4 +1,4 @@
-20:58:15 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+23:08:37 **** Incremental Build of configuration Debug for project 2_UART_modular ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
@@ -16,43 +16,14 @@ Finished building: 2_UART_modular.bin
 Finished building: 2_UART_modular.list
  
  
-20:58:26 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+23:08:50 **** Incremental Build of configuration Debug for project 2_UART_modular ****
 make -j8 all 
 arm-none-eabi-size   2_UART_modular.elf 
    text	   data	    bss	    dec	    hex	filename
     952	      8	   1568	   2528	    9e0	2_UART_modular.elf
 Finished building: default.size.stdout
  
-20:58:47 **** Incremental Build of configuration Debug for project 2_UART_modular ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-../Src/main.c: In function 'main':
-../Src/main.c:17:9: warning: implicit declaration of function 'uart2_write' [-Wimplicit-function-declaration]
-   17 |         uart2_write('Y');
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 2_UART_modular.elf
- 
-arm-none-eabi-size   2_UART_modular.elf 
-arm-none-eabi-objdump -h -S  2_UART_modular.elf  > "2_UART_modular.list"
-arm-none-eabi-objcopy  -O binary  2_UART_modular.elf  "2_UART_modular.bin"
-   text	   data	    bss	    dec	    hex	filename
-    952	      8	   1568	   2528	    9e0	2_UART_modular.elf
-Finished building: default.size.stdout
- 
-Finished building: 2_UART_modular.bin
-Finished building: 2_UART_modular.list
- 
- 
-20:59:01 **** Incremental Build of configuration Debug for project 2_UART_modular ****
-make -j8 all 
-arm-none-eabi-size   2_UART_modular.elf 
-   text	   data	    bss	    dec	    hex	filename
-    952	      8	   1568	   2528	    9e0	2_UART_modular.elf
-Finished building: default.size.stdout
- 
-21:01:11 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+23:11:42 **** Incremental Build of configuration Debug for project 2_UART_modular ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -69,13 +40,9 @@ Finished building: 2_UART_modular.bin
 Finished building: 2_UART_modular.list
  
  
-21:01:27 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+23:24:31 **** Incremental Build of configuration Debug for project 2_UART_modular ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:17:9: warning: implicit declaration of function 'uart2_write' [-Wimplicit-function-declaration]
-   17 |         uart2_write('Y');
-      |         ^~~~~~~~~~~
 arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 2_UART_modular.elf
  
@@ -83,10 +50,27 @@ arm-none-eabi-size   2_UART_modular.elf
 arm-none-eabi-objdump -h -S  2_UART_modular.elf  > "2_UART_modular.list"
 arm-none-eabi-objcopy  -O binary  2_UART_modular.elf  "2_UART_modular.bin"
    text	   data	    bss	    dec	    hex	filename
-    952	      8	   1568	   2528	    9e0	2_UART_modular.elf
+   5464	    108	   1596	   7168	   1c00	2_UART_modular.elf
 Finished building: default.size.stdout
  
 Finished building: 2_UART_modular.bin
 Finished building: 2_UART_modular.list
+ 
+ 
+23:25:48 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_UART_modular.elf
+ 
+arm-none-eabi-size   2_UART_modular.elf 
+arm-none-eabi-objdump -h -S  2_UART_modular.elf  > "2_UART_modular.list"
+arm-none-eabi-objcopy  -O binary  2_UART_modular.elf  "2_UART_modular.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5500	    108	   1596	   7204	   1c24	2_UART_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_UART_modular.list
+Finished building: 2_UART_modular.bin
  
  

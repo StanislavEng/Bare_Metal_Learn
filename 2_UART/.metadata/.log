@@ -67,3 +67,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-03-05 20:46:18.734
 !MESSAGE Indexed '2_UART_modular' (3 sources, 60 headers) in 1.84 sec: 3,040 declarations; 3,973 references; 5 unresolved inclusions; 30 syntax errors; 857 unresolved names (11%)
+!SESSION 2022-03-05 22:52:00.649 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-05 22:52:35.829
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-05 22:52:35.924
+!MESSAGE Log4j initialized with config file F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-05 22:52:43.748
+!MESSAGE Started RMI Server, listening on port 41337
