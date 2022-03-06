@@ -1186,3 +1186,13 @@
 2022-02-27 15:47:05,006 [INFO] ApiDb:280 - User favorites MCUs=[]
 2022-02-27 15:47:05,009 [INFO] ApiDb:276 - Save user favorites file C:\Users\StanPC/.stm32cubeide/favorites.boards.txt: 1 item(s)
 2022-02-27 15:47:05,009 [INFO] ApiDb:280 - User favorites Boards=[B-L475E-IOT01A1]
+2022-03-05 11:58:34,389 [INFO] Activator:177 - 
+
+
+2022-03-05 11:58:34,402 [INFO] Activator:178 - !SESSION log4j initialized
+2022-03-05 11:58:42,646 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-03-05 16:38:12,796 [INFO] Activator:177 - 
+
+
+2022-03-05 16:38:12,811 [INFO] Activator:178 - !SESSION log4j initialized
+2022-03-05 16:38:43,803 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com

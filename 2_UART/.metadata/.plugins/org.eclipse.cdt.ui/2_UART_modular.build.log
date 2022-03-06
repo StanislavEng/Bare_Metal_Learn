@@ -1,0 +1,24 @@
+21:01:27 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:17:9: warning: implicit declaration of function 'uart2_write' [-Wimplicit-function-declaration]
+   17 |         uart2_write('Y');
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_UART_modular.elf
+ 
+arm-none-eabi-size   2_UART_modular.elf 
+arm-none-eabi-objdump -h -S  2_UART_modular.elf  > "2_UART_modular.list"
+arm-none-eabi-objcopy  -O binary  2_UART_modular.elf  "2_UART_modular.bin"
+   text	   data	    bss	    dec	    hex	filename
+    952	      8	   1568	   2528	    9e0	2_UART_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_UART_modular.bin
+Finished building: 2_UART_modular.list
+ 
+ 
+
+21:01:28 Build Finished. 0 errors, 1 warnings. (took 1s.284ms)
+

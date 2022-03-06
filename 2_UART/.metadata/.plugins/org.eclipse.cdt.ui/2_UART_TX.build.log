@@ -1,35 +1,10 @@
-16:24:22 **** Build of configuration Debug for project 2_UART_TX ****
+20:48:47 **** Incremental Build of configuration Debug for project 2_UART_TX ****
 make -j8 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l476rgtx.d" -MT"Startup/startup_stm32l476rgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l476rgtx.o" "../Startup/startup_stm32l476rgtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-In file included from ../Src/main.c:8:
-F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:176:3: error: #error "Please select first the target STM32L4xx device used in your application (in stm32l4xx.h file)"
-  176 |  #error "Please select first the target STM32L4xx device used in your application (in stm32l4xx.h file)"
-      |   ^~~~~
-../Src/main.c: In function 'uart2_tx_init':
-../Src/main.c:28:2: error: 'RCC' undeclared (first use in this function)
-   28 |  RCC->AHB1ENR |= GPIOAEN;
-      |  ^~~
-../Src/main.c:28:2: note: each undeclared identifier is reported only once for each function it appears in
-../Src/main.c:31:2: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIOAEN'?
-   31 |  GPIOA->MODER |= (1U<<5);
-      |  ^~~~~
-      |  GPIOAEN
-../Src/main.c: At top level:
-../Src/main.c:53:8: error: unknown type name 'uint16_t'
-   53 | static uint16_t compute_uart_div(uint32_t PeriphClk, uint32_t BaudRate){
-      |        ^~~~~~~~
-../Src/main.c:53:34: error: unknown type name 'uint32_t'
-   53 | static uint16_t compute_uart_div(uint32_t PeriphClk, uint32_t BaudRate){
-      |                                  ^~~~~~~~
-../Src/main.c:53:54: error: unknown type name 'uint32_t'
-   53 | static uint16_t compute_uart_div(uint32_t PeriphClk, uint32_t BaudRate){
-      |                                                      ^~~~~~~~
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
+arm-none-eabi-size   2_UART_TX.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5432	    108	   1596	   7136	   1be0	2_UART_TX.elf
+Finished building: default.size.stdout
+ 
 
-16:24:35 Build Failed. 8 errors, 0 warnings. (took 12s.799ms)
+20:48:47 Build Finished. 0 errors, 0 warnings. (took 453ms)
 
