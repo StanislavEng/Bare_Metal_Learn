@@ -1,0 +1,16 @@
+!SESSION 2022-03-02 23:14:36.057 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\TESTING_CL\Documents\Engineering\stm32\bare metal\Bare_Metal_Learn\2_UART\2_UART_TX\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\TESTING_CL\Documents\Engineering\stm32\bare metal\Bare_Metal_Learn\2_UART\2_UART_TX\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-03-02 23:14:48.588
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-03-02 23:14:48.633
+!MESSAGE Log4j initialized with config file C:\Users\TESTING_CL\Documents\Engineering\stm32\bare metal\Bare_Metal_Learn\2_UART\2_UART_TX\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-03-02 23:14:50.391
+!MESSAGE Started RMI Server, listening on port 41337
