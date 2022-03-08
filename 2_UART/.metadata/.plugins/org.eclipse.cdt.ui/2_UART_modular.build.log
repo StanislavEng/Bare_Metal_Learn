@@ -1,20 +1,24 @@
-23:25:48 **** Incremental Build of configuration Debug for project 2_UART_modular ****
-make -j8 all 
+22:26:59 **** Incremental Build of configuration Debug for project 2_UART_modular ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l476rgtx.d" -MT"Startup/startup_stm32l476rgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l476rgtx.o" "../Startup/startup_stm32l476rgtx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 2_UART_modular.elf
- 
-arm-none-eabi-size   2_UART_modular.elf 
-arm-none-eabi-objdump -h -S  2_UART_modular.elf  > "2_UART_modular.list"
-arm-none-eabi-objcopy  -O binary  2_UART_modular.elf  "2_UART_modular.bin"
-   text	   data	    bss	    dec	    hex	filename
-   5500	    108	   1596	   7204	   1c24	2_UART_modular.elf
-Finished building: default.size.stdout
- 
-Finished building: 2_UART_modular.list
-Finished building: 2_UART_modular.bin
- 
- 
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -I"F:/engineering/codespace/bare_metal/Bare_Metal_L476/1_GPIO/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+In file included from ../Src/uart.c:7:
+../Inc/uart.h:12:10: fatal error: stm32l4xx.h: No such file or directory
+   12 | #include "stm32l4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Src/main.c:10:
+../Inc/uart.h:12:10: fatal error: stm32l4xx.h: No such file or directory
+   12 | #include "stm32l4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-23:25:49 Build Finished. 0 errors, 0 warnings. (took 1s.376ms)
+22:27:00 Build Failed. 5 errors, 0 warnings. (took 763ms)
 

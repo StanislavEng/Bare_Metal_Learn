@@ -59,8 +59,8 @@ all: main-build
 main-build: 2_UART_modular.elf secondary-outputs
 
 # Tool invocations
-2_UART_modular.elf: $(OBJS) $(USER_OBJS) F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+2_UART_modular.elf: $(OBJS) $(USER_OBJS) C:\Users\TESTING_CL\Documents\Engineering\stm32\bare\ metal\Bare_Metal_Learn\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "2_UART_modular.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\TESTING_CL\Documents\Engineering\stm32\bare metal\Bare_Metal_Learn\2_UART\2_UART_modular\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

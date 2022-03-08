@@ -1,0 +1,20 @@
+23:02:59 **** Incremental Build of configuration Debug for project 2_UART_RX ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L4 -DSTM32 -DNUCLEO_L476RG -DSTM32L476RGTx -DSTM32L476xx -c -I../Inc -I"C:/Users/TESTING_CL/Documents/Engineering/stm32/bare metal/chip_headers/CMSIS/Include" -I"C:/Users/TESTING_CL/Documents/Engineering/stm32/bare metal/chip_headers/CMSIS/Device/ST/STM32L4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "2_UART_RX.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\TESTING_CL\Documents\Engineering\stm32\bare metal\Bare_Metal_Learn\2_UART\2_UART_RX\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_RX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_UART_RX.elf
+ 
+arm-none-eabi-size   2_UART_RX.elf 
+arm-none-eabi-objdump -h -S  2_UART_RX.elf  > "2_UART_RX.list"
+arm-none-eabi-objcopy  -O binary  2_UART_RX.elf  "2_UART_RX.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1136	      8	   1568	   2712	    a98	2_UART_RX.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_UART_RX.bin
+Finished building: 2_UART_RX.list
+ 
+ 
+
+23:02:59 Build Finished. 0 errors, 0 warnings. (took 667ms)
+
