@@ -1,0 +1,5 @@
+
+// enable ADC on RCC
+#define ADCEN		(1U<<13))
+
+

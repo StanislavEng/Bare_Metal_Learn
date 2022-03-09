@@ -1,0 +1,5 @@
+
+// enable ADC on GPIO
+#define ADCEN		(1U<<13))
+
+

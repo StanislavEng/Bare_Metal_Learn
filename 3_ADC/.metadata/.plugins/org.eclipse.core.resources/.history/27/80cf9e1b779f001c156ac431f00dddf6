@@ -1,0 +1,5 @@
+
+// enable ADC on RCC
+#define ADCEN		(1U<<13))
+
+// PC0 is ADC 1, 2 and 3 channel 1

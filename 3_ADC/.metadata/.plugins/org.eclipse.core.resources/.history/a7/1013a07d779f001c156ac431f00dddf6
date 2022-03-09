@@ -1,0 +1,24 @@
+
+// enable ADC on RCC
+#define ADCEN		(1U<<13))
+
+// PC0 is ADC 1, 2 and 3 channel 1
+
+
+
+
+void pc0_adc_init(void){
+
+	/* Configure the ADC GPIO pin*/
+
+	/* Enable clock access to GPIOC*/
+
+	/* Set the mode of PC0 to Analog*/
+
+	/* Configure the ADC Module */
+
+	/* Enable clock access to ADC*/
+
+	/* Configure the ADC parameter*/
+
+}

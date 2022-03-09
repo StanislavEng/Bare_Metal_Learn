@@ -1,0 +1,3 @@
+
+
+#define ADCEN		(1U<<13))
