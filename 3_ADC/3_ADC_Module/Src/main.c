@@ -19,7 +19,7 @@ int main (void){
 
 
     while (1){
-    	start_conversion();
+    		start_conversion();
     		sensor_value = adc_read();
     		printf("Sensor Value : %d \n\r", (int)sensor_value);
 
