@@ -8,34 +8,20 @@
 // Trying with printf
 #include <stdio.h>
 #include "uart.h"
+#include "adc.h"
 
-#define GPIOAEN 			(1U<<0)
-#define GPIOA_5				(1U<<5)
-
-#define LED_PIN				GPIOA_5
-
-char key;
+uint32_t sensor_value;
 
 int main (void){
 
-	/* Enable Clock Access to GPIOA */
-	RCC->AHB2ENR |= GPIOAEN;
+    uart2_tx_init();
+    pc0_adc_init();
 
-	/* Set PA5 (LED) as output */
-	GPIOA->MODER |= (1U<<10);
-	GPIOA->MODER &=~(1U<<11);
-
-    uart2_rx_tx_init();
 
     while (1){
-
-    	key = uart2_read();
-    	if (key == '1'){
-    		GPIOA->ODR |= LED_PIN;
-    	}
-    	else{
-    		GPIOA->ODR &=~LED_PIN;
-    	}
+    	start_conversion();
+    		sensor_value = adc_read();
+    		printf("Sensor Value : %d \n\r", (int)sensor_value);
 
     		}
 

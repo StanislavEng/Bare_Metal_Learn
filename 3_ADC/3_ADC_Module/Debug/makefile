@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := 2_UART_RX
+BUILD_ARTIFACT_NAME := 3_ADC_Module
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-2_UART_RX.elf \
+3_ADC_Module.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-2_UART_RX.list \
+3_ADC_Module.list \
 
 OBJCOPY_BIN += \
-2_UART_RX.bin \
+3_ADC_Module.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: 2_UART_RX.elf secondary-outputs
+main-build: 3_ADC_Module.elf secondary-outputs
 
 # Tool invocations
-2_UART_RX.elf: $(OBJS) $(USER_OBJS) C:\Users\TESTING_CL\Documents\Engineering\stm32\bare\ metal\Bare_Metal_Learn\2_UART\2_UART_RX\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "2_UART_RX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\TESTING_CL\Documents\Engineering\stm32\bare metal\Bare_Metal_Learn\2_UART\2_UART_RX\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_UART_RX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+3_ADC_Module.elf: $(OBJS) $(USER_OBJS) F:\engineering\codespace\bare_metal\Bare_Metal_L476\3_ADC\3_ADC_Module\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "3_ADC_Module.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\engineering\codespace\bare_metal\Bare_Metal_L476\3_ADC\3_ADC_Module\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_ADC_Module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,19 +69,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-2_UART_RX.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "2_UART_RX.list"
+3_ADC_Module.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "3_ADC_Module.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-2_UART_RX.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "2_UART_RX.bin"
+3_ADC_Module.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "3_ADC_Module.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) 2_UART_RX.bin 2_UART_RX.elf 2_UART_RX.list default.size.stdout
+	-$(RM) 3_ADC_Module.bin 3_ADC_Module.elf 3_ADC_Module.list default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
